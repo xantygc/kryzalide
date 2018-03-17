@@ -1,7 +1,7 @@
 @extends('app')
 @section('content')
             <div class="row">
-              <div class="col-xl-4">
+              <div class="col-xl-5">
                 <!--begin:: Widgets/Blog-->
                 <img class="img-fluid" src="assets/app/media/img/misc/fellowship.jpg">
                 <div class="m-portlet">
@@ -83,7 +83,7 @@
                 </div>
                 <!--end:: Widgets/Sales States-->
               </div>
-              <div class="col-xl-4">
+              <div class="col-xl-3">
                 <!--begin:: Widgets/Sales States-->
                 <div class="m-portlet m-portlet--full-height ">
                   <div class="m-portlet__head">
