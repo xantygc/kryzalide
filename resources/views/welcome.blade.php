@@ -113,8 +113,10 @@
                       </div>
                       <div class="m-widget6__foot">
                         <div class="m-widget6__action m--align-right">
-                            <a href="#" class="like">{{ $new->like }}<i class="la la-thumbs-o-up"></i></a>
-                            {{ $new->unlike }}<i class="la la-thumbs-o-down"></i>
+
+                            <a href="#" onclick="like({{ $new->id }})"><span id="newslike-{{ $new->id }}">{{ $new->like }}</span><i class="la la-thumbs-o-up"></i></a>
+
+                             <a href="#" onclick="unlike({{ $new->id }})"><span id="newsunlike-{{ $new->id }}">{{ $new->unlike }}</span><i class="la la-thumbs-o-down"></i></a>
                         </div>
                       </div>
                     </div>

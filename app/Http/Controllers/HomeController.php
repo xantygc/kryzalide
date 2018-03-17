@@ -19,4 +19,22 @@ class HomeController extends Controller {
 		$news = News::orderBy('created_at','desc')->get();
 		return view('welcome')->with('news', $news);
 	}
+
+	public function like($newsId) {
+
+		$selectedNew = News::find($newsId);
+		$selectedNew->like +=1;
+		$selectedNew->save();
+
+		return $selectedNew->like;
+	}
+
+	public function unlike($newsId) {
+
+		$selectedNew = News::find($newsId);
+		$selectedNew->unlike +=1;
+		$selectedNew->save();
+
+		return $selectedNew->unlike;
+	}
 }
