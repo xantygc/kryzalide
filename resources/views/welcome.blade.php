@@ -102,7 +102,7 @@
                       <div class="m-widget6__head">
                         <div class="m-widget6__item">
                           <span class="m-widget6__caption">
-                            {{ $new->title }}
+                            {{ $new->title }} - {{ $new->created_at }}
                           </span>
                         </div>
                       </div>
