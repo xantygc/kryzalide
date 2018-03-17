@@ -17,6 +17,6 @@ class HomeController extends Controller {
 	public function index() {
 
 		$news = News::all();
-		return view('welcome')->with('news', $news);
+		return view('welcome')->with('news', $news)->orderBy('created_at', 'desc');
 	}
 }
