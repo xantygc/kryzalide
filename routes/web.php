@@ -11,5 +11,6 @@
 |
 */
 
+Route::post('/fellow', 'FellowsController@index');
 Route::resource('/', 'HomeController');
 
