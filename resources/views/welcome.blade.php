@@ -85,7 +85,7 @@
               </div>
               <div class="col-xl-3">
                 <!--begin:: Widgets/Sales States-->
-                <div class="m-portlet m-portlet--full-height ">
+                <div class="m-portlet">
                   <div class="m-portlet__head">
                     <div class="m-portlet__head-caption">
                       <div class="m-portlet__head-title">
@@ -95,7 +95,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="m-portlet__body">
+                  <div class="m-portlet__body" id="inner-right">
                     @foreach($news as $key => $new)
                     <div class="m-widget6">
                       <div class="m-widget6__head">

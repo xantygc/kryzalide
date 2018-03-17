@@ -1,4 +1,12 @@
 @charset "UTF-8";
+
+#inner-right {
+    height: 350px;
+    max-height: 350px;
+    overflow-y: scroll;
+    background: ivory;
+}
+
 /**
 $m--root-font: (
     size: (
@@ -7510,6 +7518,8 @@ html {
 
 html,
 body {
+  /*background-color: #333;
+  color: white;*/
   height: 100%;
   margin: 0px;
   padding: 0px;
@@ -30449,7 +30459,7 @@ select.m-select2 {
 .m-body {
   overflow: hidden; }
   .m-body .m-content {
-    padding: 30px 0; }
+    padding: 15px 0; }
   .m-body .m-wrapper {
     width: 100%; }
 
