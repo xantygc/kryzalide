@@ -3,57 +3,63 @@
             <div class="row">
               <div class="col-xl-4">
                 <!--begin:: Widgets/Blog-->
-                <div class="m-portlet m-portlet--bordered-semi m-portlet--full-height  m-portlet--rounded-force">
-                  <div class="m-portlet__head m-portlet__head--fit">
-                    <div class="m-portlet__head-caption">
-                      <div class="m-portlet__head-action">
-                        <!--button type="button" class="btn btn-sm m-btn--pill  btn-brand">
-                          Blog
-                        </button-->
-                      </div>
-                    </div>
-                  </div>
+                <img class="img-fluid" src="assets/app/media/img/misc/fellowship.jpg">
+                <div class="m-portlet">
                   <div class="m-portlet__body">
-                    <div class="m-widget19">
-                      <div class="m-widget19__pic m-portlet-fit--top m-portlet-fit--sides" style="min-height-: 286px">
-                        <!--img src="assets/app/media/img//blog/blog1.jpg" alt=""-->
-                        <!--h3 class="m-widget19__title m--font-light">
-                          Introducing New Feature
-                        </h3-->
-                        <div class="m-widget19__shadow"></div>
-                      </div>
-                      <div class="m-widget19__content">
-                        <div class="m-widget19__header">
-                          <!--div class="m-widget19__user-img">
-                            <img class="m-widget19__img" src="assets/app/media/img//users/user1.jpg" alt="">
-                          </div-->
-                          <div class="m-widget19__info">
-                            <span class="m-widget19__username">
-                              El mejor momento de mi vida
-                            </span>
-                            <br>
-                            <span class="m-widget19__time">
-                              12-12-2018
-                            </span>
-                          </div>
+                    <div class="m-widget6">
+
+                            <form class="m-form m-form--fit m-form--label-align-right">
+                                <div class="m-portlet__body">
+                                    <div class="form-group m-form__group">
+                                        <input type="text" class="form-control m-input m-input--air m-input--pill" id="facestoken">
+                                    </div>
+                                </div>
+                                <div class="m-portlet__foot m-portlet__foot--fit">
+                                    <div class="m-form__actions m-form__actions--right">
+                                        <div class="row">
+                                            <div class="col m--align-left">
+                                                <button type="reset" class="btn btn-brand">Submit</button>
+                                                <button type="reset" class="btn btn-secondary">Cancel</button>
+                                            </div>
+                                            <div class="col m--align-right">
+                                                <button type="reset" class="btn btn-danger">Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                    </div>
+                    <div class="m-widget6">
+                      <div class="m-widget6__body">
+                        <div class="m-widget6__text text-center">
+                            <a class="m-btn m-btn--pill btn btn-outline-warning" href="#" role="button">¿Qué es? quiero saber más</a>
                         </div>
-                        <div class="m-widget19__body">
-                          Lorem Ipsum is simply dummy text of the printing and typesetting industry scrambled it to make text of the printing and typesetting industry scrambled a type specimen book text of the dummy text of the printing printing and typesetting industry scrambled dummy text of the printing.
+                        <br/>
+                        <div class="m-widget6__text text-center">
+                            <a class="m-btn m-btn--pill btn btn-outline-warning" href="#" role="button">¡Os conozco! dejadme entrar</a>
                         </div>
                       </div>
-                      <!--div class="m-widget19__action">
-                        <button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-                          Read More
-                        </button>
-                      </div-->
+                                <div class="m-portlet__foot m-portlet__foot--fit">
+                                    <div class="m-form__actions m-form__actions--right">
+                                        <div class="row">
+                                            <div class="col m--align-left">
+                                                <button type="reset" class="btn btn-brand">Submit</button>
+                                            </div>
+                                            <div class="col m--align-right">
+                                                <button type="reset" class="btn btn-danger">Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                     </div>
                   </div>
                 </div>
                 <!--end:: Widgets/Blog-->
               </div>
               <div class="col-xl-4">
-                <!--begin:: Widgets/Announcements 1-->
-                <div class="m-portlet m--bg-metal m-portlet--bordered-semi m-portlet--skin-dark ">
+                <!--begin:: Widgets/Sales States-->
+                <div class="m-portlet">
                   <div class="m-portlet__head">
                     <div class="m-portlet__head-caption">
                       <div class="m-portlet__head-title">
@@ -64,19 +70,39 @@
                     </div>
                   </div>
                   <div class="m-portlet__body">
-                    <!--begin::Widget 7-->
-                    <div class="m-widget7 m-widget7--skin-dark">
-                      <div class="m-widget7__desc">
+                    <div class="m-widget6">
+                      <div class="m-widget6__body">
+                        <div class="m-widget6__text">
                         Lo dejamos claro: esta iniciativa no te llevará a ningún lado sospechoso. Nos comprometemos a que todo lo que se hará cumpla con los textos sobre los Derechos Humanos que reconocen las Naciones Unidas.
-                      </div>
-                      <div class="m-widget7__desc">
+                        </div>
+                        <div class="m-widget6__body">
                         En esta primera etapa se trata de formar una comunidad, a base de unos encuentros reales. ¿Dónde estamos empezando? Desde Europa, hemos viajado hasta Nueva Zelanda. Hemos empezado un <i>roadtrip</i> de 2 semanas para iniciar la <b>FACES COMMUNITY</b>.
+                        </div>
                       </div>
                     </div>
-                    <!--end::Widget 7-->
                   </div>
                 </div>
-                <!--end:: Widgets/Announcements 1-->
+                <div class="m-portlet">
+                  <div class="m-portlet__head">
+                    <div class="m-portlet__head-caption">
+                      <div class="m-portlet__head-title">
+                        <h3 class="m-portlet__head-text">
+                          Estadísticas
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="m-portlet__body">
+                    <div class="m-widget6">
+                      <div class="m-widget6__body">
+                        <div class="m-widget6__text">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end:: Widgets/Sales States-->
               </div>
               <div class="col-xl-4">
                 <!--begin:: Widgets/Sales States-->
@@ -107,15 +133,15 @@
                       </div>
                       <div class="m-widget6__foot">
                         <div class="m-widget6__action m--align-right">
-                          <button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
-                            Export
-                          </button>
+                            {{ $new->like }}<i class="la la-thumbs-o-up"></i>
+                            {{ $new->unlike }}<i class="la la-thumbs-o-down"></i>
                         </div>
                       </div>
                     </div>
                     @endforeach
                   </div>
                 </div>
+
                 <!--end:: Widgets/Sales States-->
               </div>
             </div>
