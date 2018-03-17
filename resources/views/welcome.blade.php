@@ -102,8 +102,9 @@
                       <div class="m-widget6__head">
                         <div class="m-widget6__item">
                           <span class="m-widget6__caption">
-                            {{ $new->title }}
+                            {{ $new->title }}<br/><span class="text-right" style="font-size: 10px; font-style: italic; color: grey">{{ $new->created_at }}</span>
                           </span>
+                          <br/>
                         </div>
                       </div>
                       <div class="m-widget6__body">
@@ -111,12 +112,14 @@
                           {{ $new->article }}
                         </div>
                       </div>
+
                       <div class="m-widget6__foot">
                         <div class="m-widget6__action m--align-right">
 
-                            <a href="#" onclick="like({{ $new->id }})"><span id="newslike-{{ $new->id }}">{{ $new->like }}</span><i class="la la-thumbs-o-up"></i></a>
-
-                             <a href="#" onclick="unlike({{ $new->id }})"><span id="newsunlike-{{ $new->id }}">{{ $new->unlike }}</span><i class="la la-thumbs-o-down"></i></a>
+                            <span id="newslike-{{ $new->id }}">{{ $new->like }}</span>
+                            <a href="#" onclick="like({{ $new->id }})"><i class="la la-thumbs-o-up"></i></a>
+                            <span id="newsunlike-{{ $new->id }}">{{ $new->unlike }}</span>
+                             <a href="#" onclick="unlike({{ $new->id }})"><i class="la la-thumbs-o-down"></i></a>
                         </div>
                       </div>
                     </div>

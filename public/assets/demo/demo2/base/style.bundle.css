@@ -18696,7 +18696,7 @@ body.m-portlet--fullscreen {
   font-weight: 600; }
   .m-widget6 .m-widget6__head .m-widget6__item .m-widget6__caption {
     display: table-cell;
-    width: 33%;
+    width: 50%;
     padding-left: 0;
     padding-right: 0; }
     .m-widget6 .m-widget6__head .m-widget6__item .m-widget6__caption:last-child {

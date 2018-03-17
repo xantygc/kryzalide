@@ -37,7 +37,7 @@
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
 			$this->form[] = ['label'=>'FacesCode','name'=>'facesCode','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Disabled','name'=>'disabled','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10','value'=>'false'];
+			$this->form[] = ['label'=>'Disabled','name'=>'disabled','type'=>'select','validation'=>'required','width'=>'col-sm-10','dataenum'=>'0|False;1|True','default'=>'0'];
 			$this->form[] = ['label'=>'Disabled At','name'=>'disabled_at','type'=>'datetime','validation'=>'date_format:Y-m-d H:i:s','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Photo','name'=>'photo','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'File types support : JPG, JPEG, PNG, GIF, BMP'];
 			# END FORM DO NOT REMOVE THIS LINE
@@ -45,7 +45,7 @@
 			# OLD START FORM
 			//$this->form = [];
 			//$this->form[] = ['label'=>'FacesCode','name'=>'facesCode','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Disabled','name'=>'disabled','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10','value'=>'false'];
+			//$this->form[] = ['label'=>'Disabled','name'=>'disabled','type'=>'select','validation'=>'0|Label 1;1|Label 2;3|Label 3','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Disabled At','name'=>'disabled_at','type'=>'datetime','validation'=>'date_format:Y-m-d H:i:s','width'=>'col-sm-10'];
 			//$this->form[] = ['label'=>'Photo','name'=>'photo','type'=>'upload','validation'=>'required|image|max:3000','width'=>'col-sm-10','help'=>'File types support : JPG, JPEG, PNG, GIF, BMP'];
 			# OLD END FORM
