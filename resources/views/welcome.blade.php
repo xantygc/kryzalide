@@ -13,18 +13,8 @@
                                     <div class="form-group m-form__group">
                                         <input type="text" class="form-control m-input m-input--air m-input--pill" id="facestoken">
                                     </div>
-                                </div>
-                                <div class="m-portlet__foot m-portlet__foot--fit">
-                                    <div class="m-form__actions m-form__actions--right">
-                                        <div class="row">
-                                            <div class="col m--align-left">
-                                                <button type="reset" class="btn btn-brand">Submit</button>
-                                                <button type="reset" class="btn btn-secondary">Cancel</button>
-                                            </div>
-                                            <div class="col m--align-right">
-                                                <button type="reset" class="btn btn-danger">Delete</button>
-                                            </div>
-                                        </div>
+                                    <div class="col m--align-center">
+                                        <button type="reset" class="btn btn-outline-brand">Enviar</button>
                                     </div>
                                 </div>
                             </form>
@@ -32,6 +22,7 @@
                     </div>
                     <div class="m-widget6">
                       <div class="m-widget6__body">
+
                         <div class="m-widget6__text text-center">
                             <a class="m-btn m-btn--pill btn btn-outline-warning" href="#" role="button">¿Qué es? quiero saber más</a>
                         </div>
@@ -40,18 +31,6 @@
                             <a class="m-btn m-btn--pill btn btn-outline-warning" href="#" role="button">¡Os conozco! dejadme entrar</a>
                         </div>
                       </div>
-                                <div class="m-portlet__foot m-portlet__foot--fit">
-                                    <div class="m-form__actions m-form__actions--right">
-                                        <div class="row">
-                                            <div class="col m--align-left">
-                                                <button type="reset" class="btn btn-brand">Submit</button>
-                                            </div>
-                                            <div class="col m--align-right">
-                                                <button type="reset" class="btn btn-danger">Delete</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                     </div>
                   </div>
                 </div>
