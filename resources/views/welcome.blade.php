@@ -113,7 +113,7 @@
                       </div>
                       <div class="m-widget6__foot">
                         <div class="m-widget6__action m--align-right">
-                            {{ $new->like }}<i class="la la-thumbs-o-up"></i>
+                            <a href="#" class="like">{{ $new->like }}<i class="la la-thumbs-o-up"></i></a>
                             {{ $new->unlike }}<i class="la la-thumbs-o-down"></i>
                         </div>
                       </div>
