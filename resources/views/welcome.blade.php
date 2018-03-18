@@ -7,18 +7,24 @@
                 <div class="m-portlet">
                   <div class="m-portlet__body">
                     <div class="m-widget6">
-
-                            {!! Form::open(['method' => 'post',  'action' => 'FellowsController@index', 'class' => 'm-form m-form--fit m-form--label-align-right']) !!}
-                                {{ csrf_field() }}
-                                <div class="m-m-form m-form--fit m-form--label-align-rightportlet__body">
-                                    <div class="form-group m-form__group">
-                                        <input required="true" maxlength="7" type="text" class="form-control m-input m-input--air m-input--pill" name="facestoken" id="facestoken" placeholder="Introduce tu token">
-                                    </div>
-                                    <div class="col m--align-center">
-                                        <button type="submit" class="btn btn-outline-brand">Enviar</button>
-                                    </div>
+                        
+                        @if($errors->any())
+                        <div class="alert alert-warning alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                            <strong>¡Whooops!</strong> {{ $errors->first() }}
+                        </div>
+                        @endif
+                        {!! Form::open(['method' => 'post',  'action' => 'FellowsController@index', 'class' => 'm-form m-form--fit m-form--label-align-right']) !!}
+                            {{ csrf_field() }}
+                            <div class="m-m-form m-form--fit m-form--label-align-rightportlet__body">
+                                <div class="form-group m-form__group">
+                                    <input required="true" maxlength="7" type="text" class="form-control m-input m-input--air m-input--pill" name="facestoken" id="facestoken" placeholder="Introduce tu token">
                                 </div>
-                            {!! Form::close() !!}
+                                <div class="col m--align-center">
+                                    <button type="submit" class="btn btn-outline-brand">Enviar</button>
+                                </div>
+                            </div>
+                        {!! Form::close() !!}
                     </div>
                     <br/>
                     <div class="m-widget6">

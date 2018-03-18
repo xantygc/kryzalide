@@ -14,7 +14,7 @@ class FellowsController extends Controller {
 
 		if($fellow->isEmpty())
 		{
-			return redirect()->back()->with($message, 'El token introducido no existe');
+			return redirect()->back()->withErrors(['El token introducido no existe']);
 		}
 
 		return view('fellow')->with('fellow', $fellow->first());
