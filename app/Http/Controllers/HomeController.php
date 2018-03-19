@@ -3,7 +3,7 @@ namespace App\Http\Controllers;
 
 use DB;
 use Session;
-use Request;
+use Illuminate\Http\Request;
 use App\News;
 
 class HomeController extends Controller {
@@ -14,9 +14,20 @@ class HomeController extends Controller {
 	| --------------------------------------
 	|
 	*/
-	public function index() {
+	public function index(Request $request) {
 
 		$news = News::orderBy('created_at','desc')->get();
+
+		$fellows = DB::table('fellows')->where('disabled',0)->count();
+		$likes = DB::table('news')->sum('like');
+		$padrinos = 0;
+		$apadrinados = 0;
+
+		$request->session()->put('fellows', $fellows);
+		$request->session()->put('likes', $likes);
+		$request->session()->put('padrinos', $padrinos);
+		$request->session()->put('apadrinados', $apadrinados);
+		
 		return view('welcome')->with('news', $news);
 	}
 
