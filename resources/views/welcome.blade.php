@@ -113,81 +113,79 @@
     <!--end:: Widgets/Sales States-->
   </div>
 </div>
-<div class="row">
-  <div class="col-xl-12">
+
 <div class="row m-row--no-padding m-row--col-separator-xl">
-      <div class="col-md-12 col-lg-6 col-xl-3">
-        <!--begin::Total Profit-->
-        <div class="m-widget24">           
-            <div class="m-widget24__item">
-                <h4 class="m-widget24__title">
-                    Fellows activos
-                </h4><br>
-                <span class="m-widget24__desc">
-                    en la comunidad 
-                </span>
-                <span class="m-widget24__stats m--font-brand">
-                    {{Session::get('fellows')}}
-                </span>   
-            </div>              
-        </div>
-        <!--end::Total Profit-->
-      </div>
-      <div class="col-md-12 col-lg-6 col-xl-3">
-        <!--begin::New Feedbacks-->
-        <div class="m-widget24">
-           <div class="m-widget24__item">
-                <h4 class="m-widget24__title">
-                    Likes
-                </h4><br>
-                <span class="m-widget24__desc">
-                    totales
-                </span>
-                <span class="m-widget24__stats m--font-info">
-                    {{Session::get('likes')}}
-                </span>   
-                <div class="m--space-10"></div>
-            </div>    
-        </div>
-        <!--end::New Feedbacks--> 
-      </div>
-      <div class="col-md-12 col-lg-6 col-xl-3">
-        <!--begin::New Orders-->
-        <div class="m-widget24">
-          <div class="m-widget24__item">
-                <h4 class="m-widget24__title">
-                    Padrinos
-                </h4><br>
-                <span class="m-widget24__desc">
-                    en la comunidad
-                </span>
-                <span class="m-widget24__stats m--font-danger">
-                    {{Session::get('padrinos')}}
-                </span>   
-                <div class="m--space-10"></div>
-            </div>    
-        </div>
-        <!--end::New Orders--> 
-      </div>
-      <div class="col-md-12 col-lg-6 col-xl-3">
-        <!--begin::New Users-->
-        <div class="m-widget24">
-           <div class="m-widget24__item">
-                <h4 class="m-widget24__title">
-                    Apadrinados
-                </h4><br>
-                <span class="m-widget24__desc">
-                    en la comunidad
-                </span>
-                <span class="m-widget24__stats m--font-success">
-                    {{Session::get('apadrinados')}}
-                </span>   
-                <div class="m--space-10"></div>
-            </div>    
-        </div>
-        <!--end::New Users--> 
-      </div>
+  <div class="col-md-12 col-lg-6 col-xl-3">
+    <!--begin::Total Profit-->
+    <div class="m-widget24">           
+        <div class="m-widget24__item">
+            <h4 class="m-widget24__title">
+                Fellows activos
+            </h4><br>
+            <span class="m-widget24__desc">
+                en la comunidad 
+            </span>
+            <span class="m-widget24__stats m--font-brand">
+                {{Session::get('fellows')}}
+            </span>   
+        </div>              
     </div>
+    <!--end::Total Profit-->
+  </div>
+  <div class="col-md-12 col-lg-6 col-xl-3">
+    <!--begin::New Feedbacks-->
+    <div class="m-widget24">
+       <div class="m-widget24__item">
+            <h4 class="m-widget24__title">
+                Likes
+            </h4><br>
+            <span class="m-widget24__desc">
+                totales
+            </span>
+            <span class="m-widget24__stats m--font-info">
+                {{Session::get('likes')}}
+            </span>   
+            <div class="m--space-10"></div>
+        </div>    
+    </div>
+    <!--end::New Feedbacks--> 
+  </div>
+  <div class="col-md-12 col-lg-6 col-xl-3">
+    <!--begin::New Orders-->
+    <div class="m-widget24">
+      <div class="m-widget24__item">
+            <h4 class="m-widget24__title">
+                Padrinos
+            </h4><br>
+            <span class="m-widget24__desc">
+                en la comunidad
+            </span>
+            <span class="m-widget24__stats m--font-danger">
+                {{Session::get('padrinos')}}
+            </span>   
+            <div class="m--space-10"></div>
+        </div>    
+    </div>
+    <!--end::New Orders--> 
+  </div>
+  <div class="col-md-12 col-lg-6 col-xl-3">
+    <!--begin::New Users-->
+    <div class="m-widget24">
+       <div class="m-widget24__item">
+            <h4 class="m-widget24__title">
+                Apadrinados
+            </h4><br>
+            <span class="m-widget24__desc">
+                en la comunidad
+            </span>
+            <span class="m-widget24__stats m--font-success">
+                {{Session::get('apadrinados')}}
+            </span>   
+            <div class="m--space-10"></div>
+        </div>    
+    </div>
+    <!--end::New Users--> 
   </div>
 </div>
+
 @stop

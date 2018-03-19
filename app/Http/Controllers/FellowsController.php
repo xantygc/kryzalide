@@ -17,6 +17,16 @@ class FellowsController extends Controller {
 			return redirect()->back()->withErrors(['El token introducido no existe']);
 		}
 
+		$fellows = DB::table('fellows')->where('disabled',0)->count();
+		$likes = DB::table('news')->sum('like');
+		$padrinos = 0;
+		$apadrinados = 0;
+
+		$request->session()->put('fellows', $fellows);
+		$request->session()->put('likes', $likes);
+		$request->session()->put('padrinos', $padrinos);
+		$request->session()->put('apadrinados', $apadrinados);
+
 		return view('fellow')->with('fellow', $fellow->first());
 	}
 }
