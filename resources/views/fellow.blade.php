@@ -30,17 +30,38 @@
 
                 <!--end:: Widgets/Blog-->
               </div>
-              <div class="col-xl-7">
+              <div class="col-xl-5 offset-xl-2">
                 <div class="text-center">
                   <img style="max-height: 267px" class="img-fluid" src="{{ $fellow->photo }}">
                 </div>
                 <div class="m-portlet">
-                  <div class="m-portlet__head">
-                    <div class="m-portlet__head-caption">
-                      <div class="m-portlet__head-title">
-                        <h3 class="m-portlet__head-text">
-                          Novedades
-                        </h3>
+                  <div class="m-portlet__body">
+                    <div class="m-widget6">
+                      <div class="m-widget6__body m--align-center">
+                        {!! Form::open(['method' => 'post',  'action' => 'FellowsController@index', 'class' => 'm-form m-form--fit m-form--label-align-right']) !!}
+                            {{ csrf_field() }}
+                            <div class="m-m-form m-form--fit m-form--label-align-rightportlet__body form-row">
+                                <div class="col form-group m-form__group">
+                                    <input required="true" maxlength="7" type="text" class="form-control m-input" name="facestoken" id="facestoken" placeholder="Introduce token de padrino">
+                                </div>
+                                <div class="col m--align-left">
+                                    <button type="submit" class="btn btn-outline-brand">Enviar</button>
+                                    <button type="submit" class="btn btn-outline-brand">Ver padrinos</button>
+                                </div>
+                            </div>
+                        {!! Form::close() !!}
+                        {!! Form::open(['method' => 'post',  'action' => 'FellowsController@index', 'class' => 'm-form m-form--fit m-form--label-align-right']) !!}
+                            {{ csrf_field() }}
+                            <div class="m-m-form m-form--fit m-form--label-align-rightportlet__body form-row">
+                                <div class="col form-group m-form__group">
+                                    <input required="true" maxlength="7" type="text" class="form-control m-input" name="facestoken" id="facestoken" placeholder="Introduce token de apadrinado">
+                                </div>
+                                <div class="col m--align-left">
+                                    <button type="submit" class="btn btn-outline-brand">Enviar</button>
+                                    <button type="submit" class="btn btn-outline-brand">Ver apadrinados</button>
+                                </div>
+                            </div>
+                        {!! Form::close() !!}
                       </div>
                     </div>
                   </div>
@@ -51,3 +72,5 @@
             </div>
 
 @stop
+
+
