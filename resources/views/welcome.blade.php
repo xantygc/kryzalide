@@ -16,11 +16,11 @@
                         @endif
                         {!! Form::open(['method' => 'post',  'action' => 'FellowsController@index', 'class' => 'm-form m-form--fit m-form--label-align-right']) !!}
                             {{ csrf_field() }}
-                            <div class="m-m-form m-form--fit m-form--label-align-rightportlet__body">
-                                <div class="form-group m-form__group">
-                                    <input required="true" maxlength="7" type="text" class="form-control m-input m-input--air m-input--pill" name="facestoken" id="facestoken" placeholder="Introduce tu token">
+                            <div class="m-m-form m-form--fit m-form--label-align-rightportlet__body form-row">
+                                <div class="col form-group m-form__group">
+                                    <input required="true" maxlength="7" type="text" class="form-control m-input" name="facestoken" id="facestoken" placeholder="Introduce tu token">
                                 </div>
-                                <div class="col m--align-center">
+                                <div class="col m--align-left">
                                     <button type="submit" class="btn btn-outline-brand">Enviar</button>
                                 </div>
                             </div>
@@ -30,11 +30,8 @@
                     <div class="m-widget6">
                       <div class="m-widget6__body">
 
-                        <div class="m-widget6__text text-center">
+                        <div class="m-widget6__text m--align-center">
                             <a class="m-btn m-btn--pill btn btn-outline-warning" href="#" role="button">¿Qué es? quiero saber más</a>
-                        </div>
-                        <br/>
-                        <div class="m-widget6__text text-center">
                             <a class="m-btn m-btn--pill btn btn-outline-warning" href="#" role="button">¡Os conozco! dejadme entrar</a>
                         </div>
                       </div>

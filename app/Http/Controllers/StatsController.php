@@ -4,18 +4,27 @@ namespace App\Http\Controllers;
 use DB;
 use Session;
 use Request;
-use App\News;
+use App\Stats;
 
 class StatsController extends Controller {
 
-	/*
-	| --------------------------------------
-	| Please note that you should re-login to see the session work
-	| --------------------------------------
-	|
-	*/
+
 	public function index() {
 
 
 	}
+
+		public function wantToKnowMore() {
+
+		return 0;
+	}
+
+}
+
+		public function letMeGetIn() {
+
+		return 0;
+	}
+
+
 }

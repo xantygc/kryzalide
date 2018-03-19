@@ -32,7 +32,7 @@
               </div>
               <div class="col-xl-7">
                 <div class="text-center">
-                  <img class="img-fluid" src="{{ $fellow->photo }}">
+                  <img style="max-height: 267px" class="img-fluid" src="{{ $fellow->photo }}">
                 </div>
                 <div class="m-portlet">
                   <div class="m-portlet__head">

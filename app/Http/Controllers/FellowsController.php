@@ -10,9 +10,9 @@ class FellowsController extends Controller {
 	public function index(Request $request) {
 
 		$code = $request->input('facestoken');
-		$fellow = Fellows::where('facescode', $code)->get();
+		$fellow = Fellows::where('facescode', $code)->where('disabled', '0')->get();
 
-		if($fellow->isEmpty())
+		if($fellow->isEmpty() )
 		{
 			return redirect()->back()->withErrors(['El token introducido no existe']);
 		}
