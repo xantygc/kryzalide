@@ -22,10 +22,17 @@ class FellowsController extends Controller {
 		$padrinos = DB::table('relationships')->select('referrer')->distinct()->count();
 		$apadrinados = DB::table('relationships')->select('referrered')->distinct()->count();
 		
+		$apadrinadosCodes = DB::table('relationships')->distinct()->pluck('referrered');
+		$padrinosCodes = DB::table('relationships')->distinct()->pluck('referrer');
+
 		$request->session()->put('fellows', $fellows);
 		$request->session()->put('likes', $likes);
 		$request->session()->put('padrinos', $padrinos);
 		$request->session()->put('apadrinados', $apadrinados);
+
+		$request->session()->put('listaApadrinados', $apadrinadosCodes);
+		$request->session()->put('listaPadrinos', $padrinosCodes);
+		
 
 		return view('fellow')->with('fellow', $fellow->first());
 	}

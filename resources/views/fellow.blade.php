@@ -1,7 +1,7 @@
 @extends('app')
 @section('content')
 <div class="row">
-  <div class="col-xl-5">
+  <div class="col-xl-7">
     <img class="img-fluid" src="assets/app/media/img/misc/fellowship.jpg">
         <div class="m-portlet">
           <div class="m-portlet__head">
@@ -30,13 +30,17 @@
 
     <!--end:: Widgets/Blog-->
   </div>
-  <div class="col-xl-5 offset-xl-2">
+  <div class="col-xl-5">
     <div class="text-center">
       <img style="max-height: 267px" class="img-fluid" src="{{ $fellow->photo }}">
     </div>
     <div class="m-portlet">
       <div class="m-portlet__body">
         <div class="m-widget6">
+          <div class="m-widget6__body m--align-center">
+            <a class="m-btn m-btn--pill btn btn-outline-danger" data-toggle="modal" data-target="#m_modal_1" href="#" role="button">Abandonar</a>
+          </div>
+          <br/>
           <div class="m-widget6__body m--align-center">
             {!! Form::open(['method' => 'post',  'action' => 'RelationshipsController@addRelationship', 'class' => 'm-form m-form--fit m-form--label-align-right']) !!}
                 {{ csrf_field() }}
@@ -46,7 +50,7 @@
                     </div>
                     <div class="col m--align-left">
                         <button type="submit" class="btn btn-outline-brand">Enviar</button>
-                        <button type="button" class="btn btn-outline-brand">Ver padrinos</button>
+                        <button type="button" data-toggle="modal" data-target="#m_modal_1_2" class="btn btn-outline-brand">Ver padrinos</button>
                     </div>
                 </div>
                 <input type="hidden" name="apadrinado" value="{{ $fellow->facesCode }}">
@@ -60,7 +64,7 @@
                     </div>
                     <div class="col m--align-left">
                         <button type="submit" class="btn btn-outline-brand">Enviar</button>
-                        <button type="button" class="btn btn-outline-brand">Ver apadrinados</button>
+                        <button type="button" data-toggle="modal" data-target="#m_modal_1_3" class="btn btn-outline-brand">Ver apadrinados</button>
                     </div>
                 </div>
                 <input type="hidden" name="padrino" value="{{ $fellow->facesCode }}">
@@ -147,6 +151,76 @@
     <!--end::New Users--> 
   </div>
 </div>
+
+<!--begin::Modal-->
+<div class="modal fade" id="m_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Abandonar Faces Community</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <p>Esta acción es irreversible. Si continúa no podrá volver a acceder a <bold>FACES COMMUNITY</bold>.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-danger">Abandonar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end::Modal-->
+<!--begin::Modal-->
+<div class="modal fade" id="m_modal_1_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Padrinos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+           <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-max-height="200">
+            @foreach(Session::get('listaPadrinos') as $key => $padrino)
+              <p>{{$padrino}}</p>
+            @endforeach
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end::Modal-->
+<!--begin::Modal-->
+<div class="modal fade" id="m_modal_1_3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Apadrinados</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+           <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-max-height="200">
+            @foreach(Session::get('listaApadrinados') as $key => $apadrinado)
+              <p>{{$apadrinado}}</p>
+            @endforeach
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end::Modal-->
 @stop
 
 
