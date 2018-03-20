@@ -1,22 +1,27 @@
 <?php 
 namespace App\Http\Controllers;
 
+use App\Relationships;
 use App\Fellows;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class FellowsController extends Controller {
+class RelationshipsController extends Controller {
 
-	public function index(Request $request) {
+	public function addRelationship(Request $request) {
 
-		$code = $request->input('facestoken');
+		$padrino = $request->input('padrino');
+		$apadrinado = $request->input('apadrinado');
+		$code = $request->input('facescode');
+
+		$relationship = new Relationships;
+		$relationship->referrer = $padrino;
+		$relationship->referrered = $apadrinado;
+
+		$relationship->save();
+
 		$fellow = Fellows::where('facescode', $code)->where('disabled', '0')->get();
-
-		if($fellow->isEmpty() )
-		{
-			return redirect()->back()->withErrors(['El token introducido no existe']);
-		}
-
+		
 		$fellows = DB::table('fellows')->where('disabled',0)->count();
 		$likes = DB::table('news')->sum('like');
 		$padrinos = DB::table('relationships')->select('referrer')->distinct()->count();
@@ -27,6 +32,8 @@ class FellowsController extends Controller {
 		$request->session()->put('padrinos', $padrinos);
 		$request->session()->put('apadrinados', $apadrinados);
 
+		
 		return view('fellow')->with('fellow', $fellow->first());
 	}
+
 }

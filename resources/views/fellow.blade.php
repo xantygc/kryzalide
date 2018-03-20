@@ -38,29 +38,33 @@
       <div class="m-portlet__body">
         <div class="m-widget6">
           <div class="m-widget6__body m--align-center">
-            {!! Form::open(['method' => 'post',  'action' => 'FellowsController@index', 'class' => 'm-form m-form--fit m-form--label-align-right']) !!}
+            {!! Form::open(['method' => 'post',  'action' => 'RelationshipsController@addRelationship', 'class' => 'm-form m-form--fit m-form--label-align-right']) !!}
                 {{ csrf_field() }}
                 <div class="m-m-form m-form--fit m-form--label-align-rightportlet__body form-row">
                     <div class="col form-group m-form__group">
-                        <input required="true" maxlength="7" type="text" class="form-control m-input" name="facestoken" id="facestoken" placeholder="Introduce token de padrino">
+                        <input required="true" maxlength="7" type="text" class="form-control m-input" name="padrino" id="padrino" placeholder="Introduce token de padrino">
                     </div>
                     <div class="col m--align-left">
                         <button type="submit" class="btn btn-outline-brand">Enviar</button>
-                        <button type="submit" class="btn btn-outline-brand">Ver padrinos</button>
+                        <button type="button" class="btn btn-outline-brand">Ver padrinos</button>
                     </div>
                 </div>
+                <input type="hidden" name="apadrinado" value="{{ $fellow->facesCode }}">
+                <input type="hidden" name="facescode" value="{{ $fellow->facesCode }}">
             {!! Form::close() !!}
-            {!! Form::open(['method' => 'post',  'action' => 'FellowsController@index', 'class' => 'm-form m-form--fit m-form--label-align-right']) !!}
+            {!! Form::open(['method' => 'post',  'action' => 'RelationshipsController@addRelationship', 'class' => 'm-form m-form--fit m-form--label-align-right']) !!}
                 {{ csrf_field() }}
                 <div class="m-m-form m-form--fit m-form--label-align-rightportlet__body form-row">
                     <div class="col form-group m-form__group">
-                        <input required="true" maxlength="7" type="text" class="form-control m-input" name="facestoken" id="facestoken" placeholder="Introduce token de apadrinado">
+                        <input required="true" maxlength="7" type="text" class="form-control m-input" name="apadrinado" id="apadrinado" placeholder="Introduce token de apadrinado">
                     </div>
                     <div class="col m--align-left">
                         <button type="submit" class="btn btn-outline-brand">Enviar</button>
-                        <button type="submit" class="btn btn-outline-brand">Ver apadrinados</button>
+                        <button type="button" class="btn btn-outline-brand">Ver apadrinados</button>
                     </div>
                 </div>
+                <input type="hidden" name="padrino" value="{{ $fellow->facesCode }}">
+                <input type="hidden" name="facescode" value="{{ $fellow->facesCode }}">
             {!! Form::close() !!}
           </div>
         </div>

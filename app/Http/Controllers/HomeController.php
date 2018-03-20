@@ -20,14 +20,14 @@ class HomeController extends Controller {
 
 		$fellows = DB::table('fellows')->where('disabled',0)->count();
 		$likes = DB::table('news')->sum('like');
-		$padrinos = 0;
-		$apadrinados = 0;
+		$padrinos = DB::table('relationships')->select('referrer')->distinct()->count();
+		$apadrinados = DB::table('relationships')->select('referrered')->distinct()->count();
 
 		$request->session()->put('fellows', $fellows);
 		$request->session()->put('likes', $likes);
 		$request->session()->put('padrinos', $padrinos);
 		$request->session()->put('apadrinados', $apadrinados);
-		
+
 		return view('welcome')->with('news', $news);
 	}
 
