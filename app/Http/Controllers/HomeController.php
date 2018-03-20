@@ -5,6 +5,7 @@ use DB;
 use Session;
 use Illuminate\Http\Request;
 use App\News;
+use Carbon\Carbon;
 
 class HomeController extends Controller {
 
@@ -37,6 +38,10 @@ class HomeController extends Controller {
 		$selectedNew->like +=1;
 		$selectedNew->save();
 
+		DB::table('stats')->insert(
+		    ['name' => 'Like en noticia '.$newsId, 'value' => 1, 'created_at' => Carbon::now()]
+		);
+
 		return $selectedNew->like;
 	}
 
@@ -45,6 +50,10 @@ class HomeController extends Controller {
 		$selectedNew = News::find($newsId);
 		$selectedNew->unlike +=1;
 		$selectedNew->save();
+
+		DB::table('stats')->insert(
+		    ['name' => 'Unlike en noticia '.$newsId, 'value' => 1, 'created_at' => Carbon::now()]
+		);
 
 		return $selectedNew->unlike;
 	}
