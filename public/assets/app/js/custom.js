@@ -20,14 +20,27 @@ function like(id)
             });
 }
 
-function unlike(id)
+function letMeIn()
 {
   $.ajax({
-                url: '/unlike/'+id,
+                url: '/entrar',
                 type: 'GET',               
                 success: function (response) {
                    console.log("response received: "+response);
-                   $("#newsunlike-"+id).text(response);
+                },
+                error: function (response) {
+                   console.log(response.message);
+                }
+            });
+}
+
+function wantToKnowMore()
+{
+  $.ajax({
+                url: '/saber',
+                type: 'GET',               
+                success: function (response) {
+                   console.log("response received: "+response);
                 },
                 error: function (response) {
                    console.log(response.message);

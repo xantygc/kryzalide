@@ -30,8 +30,8 @@
         <div class="m-widget6">
           <div class="m-widget6__body">
             <div class="m-widget6__text m--align-center">
-                <a class="m-btn m-btn--pill btn btn-outline-warning" href="#" role="button">¿Qué es? quiero saber más</a>
-                <a class="m-btn m-btn--pill btn btn-outline-warning" href="#" role="button">¡Os conozco! dejadme entrar</a>
+                <a class="m-btn m-btn--pill btn btn-outline-warning" onclick="wantToKnowMore()" href="#" role="button">¿Qué es? quiero saber más</a>
+                <a class="m-btn m-btn--pill btn btn-outline-warning" onclick="letMeIn()" href="#" role="button">¡Os conozco! dejadme entrar</a>
             </div>
           </div>
         </div>

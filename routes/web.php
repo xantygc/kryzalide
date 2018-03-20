@@ -17,4 +17,8 @@ Route::get('/fellow', 'FellowsController@index');
 Route::post('/fellow', 'FellowsController@index');
 Route::get('/like/{newsId}', 'HomeController@like');
 Route::get('/unlike/{newsId}', 'HomeController@unlike');
+
+Route::get('/entrar/', 'StatsController@entrar');
+Route::get('/saber/', 'StatsController@saber');
+
 Route::post('/relationship', 'RelationshipsController@addRelationship');

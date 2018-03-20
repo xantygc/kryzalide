@@ -60,7 +60,7 @@ class FellowsController extends Controller {
 		$request->session()->put('apadrinados', $apadrinados);
 
 		DB::table('stats')->insert(
-		    ['name' => 'Dejar la plataforma '.$code, 'value' => 1, 'created_at' => Carbon::now()]
+		    ['name' => 'Dejar la plataforma', 'value' => $code, 'created_at' => Carbon::now()]
 		);
 
 		return view('welcome')->with('news', $news);

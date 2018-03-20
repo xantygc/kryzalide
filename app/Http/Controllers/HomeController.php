@@ -39,7 +39,7 @@ class HomeController extends Controller {
 		$selectedNew->save();
 
 		DB::table('stats')->insert(
-		    ['name' => 'Like en noticia '.$newsId, 'value' => 1, 'created_at' => Carbon::now()]
+		    ['name' => 'Like en noticia', 'value' => $newsId, 'created_at' => Carbon::now()]
 		);
 
 		return $selectedNew->like;
@@ -52,7 +52,7 @@ class HomeController extends Controller {
 		$selectedNew->save();
 
 		DB::table('stats')->insert(
-		    ['name' => 'Unlike en noticia '.$newsId, 'value' => 1, 'created_at' => Carbon::now()]
+		    ['name' => 'Unlike en noticia', 'value' => $newsId, 'created_at' => Carbon::now()]
 		);
 
 		return $selectedNew->unlike;
