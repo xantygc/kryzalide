@@ -166,8 +166,12 @@
        <p>Esta acción es irreversible. Si continúa no podrá volver a acceder a <bold>FACES COMMUNITY</bold>.</p>
       </div>
       <div class="modal-footer">
+        {!! Form::open(['method' => 'post',  'action' => 'FellowsController@leave', 'class' => 'm-form m-form--fit m-form--label-align-right']) !!}
+        {{ csrf_field() }}
+        <input type="hidden" name="facescode" value="{{ $fellow->facesCode }}">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-danger">Abandonar</button>
+        <button type="submit" class="btn btn-danger">Abandonar</button>
+        {!! Form::close() !!}
       </div>
     </div>
   </div>
@@ -197,7 +201,7 @@
   </div>
 </div>
 <!--end::Modal-->
-<!--begin::Modal-->
+<!--begin::Modal-->+
 <div class="modal fade" id="m_modal_1_3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
