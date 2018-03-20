@@ -68,7 +68,7 @@
       </header>
       <!-- end::Header -->    
     <!-- begin::Body -->
-      <div class="m-grid__item m-grid__item--fluid  m-grid m-grid--ver-desktop m-grid--desktop  m-container m-container--responsive m-container--xxl m-page__container m-body">
+      <div class="m-grid__item m-grid__item--fluid  m-grid m-grid--ver-desktop m-grid--desktop  m-body m-page__container">
         <div class="m-grid__item m-grid__item--fluid m-wrapper">
           <div class="m-content">
             <!--Begin::Section-->
