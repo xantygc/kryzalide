@@ -18,10 +18,10 @@
                 {{ csrf_field() }}
                 <div class="m-m-form m-form--fit m-form--label-align-rightportlet__body form-row">
                     <div class="col form-group m-form__group">
-                        <input required="true" maxlength="7" type="text" class="form-control m-input" name="facestoken" id="facestoken" placeholder="Introduce tu token">
+                        <input required="true" maxlength="7" type="text" class="form-control m-input" name="facestoken" id="facestoken" placeholder="Enter your token">
                     </div>
                     <div class="col m--align-left">
-                        <button type="submit" class="btn btn-outline-brand">Enviar</button>
+                        <button type="submit" class="btn btn-outline-brand">Send</button>
                     </div>
                 </div>
             {!! Form::close() !!}
@@ -30,8 +30,8 @@
         <div class="m-widget6">
           <div class="m-widget6__body">
             <div class="m-widget6__text m--align-center">
-                <a class="m-btn m-btn--pill btn btn-outline-warning" onclick="wantToKnowMore()" href="#" role="button">¿Qué es? quiero saber más</a>
-                <a class="m-btn m-btn--pill btn btn-outline-warning" onclick="letMeIn()" href="#" role="button">¡Os conozco! dejadme entrar</a>
+                <a class="m-btn m-btn--pill btn btn-outline-warning" onclick="wantToKnowMore();" href="#" role="button">What's this ? I want to know more !</a>
+                <a class="m-btn m-btn--pill btn btn-outline-warning" onclick="letMeIn();" href="#" role="button">I am aware of this ! Let me in !</a>
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@
         <div class="m-portlet__head-caption">
           <div class="m-portlet__head-title">
             <h3 class="m-portlet__head-text">
-              Novedades
+              News
             </h3>
           </div>
         </div>
@@ -119,10 +119,10 @@
     <div class="m-widget24">           
         <div class="m-widget24__item">
             <h4 class="m-widget24__title">
-                Fellows activos
+                Active Fellows
             </h4><br>
             <span class="m-widget24__desc">
-                en la comunidad 
+                in Faces Community 
             </span>
             <span class="m-widget24__stats m--font-brand">
                 {{Session::get('fellows')}}
@@ -139,7 +139,7 @@
                 Likes
             </h4><br>
             <span class="m-widget24__desc">
-                totales
+                in Faces Community
             </span>
             <span class="m-widget24__stats m--font-info">
                 {{Session::get('likes')}}
@@ -154,10 +154,10 @@
     <div class="m-widget24">
       <div class="m-widget24__item">
             <h4 class="m-widget24__title">
-                Padrinos
+                Referrer of
             </h4><br>
             <span class="m-widget24__desc">
-                en la comunidad
+                in Faces Community
             </span>
             <span class="m-widget24__stats m--font-danger">
                 {{Session::get('padrinos')}}
@@ -172,10 +172,10 @@
     <div class="m-widget24">
        <div class="m-widget24__item">
             <h4 class="m-widget24__title">
-                Apadrinados
+                Referrered by
             </h4><br>
             <span class="m-widget24__desc">
-                en la comunidad
+                in Faces Community
             </span>
             <span class="m-widget24__stats m--font-success">
                 {{Session::get('apadrinados')}}

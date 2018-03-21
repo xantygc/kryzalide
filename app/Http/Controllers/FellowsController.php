@@ -16,7 +16,7 @@ class FellowsController extends Controller {
 
 		if($fellow->isEmpty() )
 		{
-			return redirect()->back()->withErrors(['El token introducido no existe']);
+			return redirect()->back()->withErrors(['the token entered is invalid']);
 		}
 
 		$fellows = DB::table('fellows')->where('disabled',0)->count();

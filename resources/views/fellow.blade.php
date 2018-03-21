@@ -13,7 +13,7 @@
       <div class="m-portlet__body">
         <div class="m-widget6">
           <div class="m-widget6__body m--align-center">
-            <a class="m-btn m-btn--pill btn btn-outline-danger" data-toggle="modal" data-target="#m_modal_1" href="#" role="button">Abandonar</a>
+            <a class="m-btn m-btn--pill btn btn-outline-danger" data-toggle="modal" data-target="#m_modal_1" href="#" role="button">Leave Faces Community</a>
           </div>
           <br/>
           <div class="m-widget6__body m--align-center">
@@ -21,11 +21,11 @@
                 {{ csrf_field() }}
                 <div class="m-m-form m-form--fit m-form--label-align-rightportlet__body form-row">
                     <div class="col form-group m-form__group">
-                        <input required="true" maxlength="7" type="text" class="form-control m-input" name="padrino" id="padrino" placeholder="Introduce token de padrino">
+                        <input required="true" maxlength="7" type="text" class="form-control m-input" name="padrino" id="padrino" placeholder="Referr Of">
                     </div>
                     <div class="col m--align-left">
-                        <button type="submit" class="btn btn-outline-brand">Enviar</button>
-                        <button type="button" data-toggle="modal" data-target="#m_modal_1_2" class="btn btn-outline-brand">Ver padrinos</button>
+                        <button type="submit" class="btn btn-outline-brand">Send</button>
+                        <button type="button" data-toggle="modal" data-target="#m_modal_1_2" class="btn btn-outline-brand">Referrer Of</button>
                     </div>
                 </div>
                 <input type="hidden" name="apadrinado" value="{{ $fellow->facesCode }}">
@@ -35,11 +35,11 @@
                 {{ csrf_field() }}
                 <div class="m-m-form m-form--fit m-form--label-align-rightportlet__body form-row">
                     <div class="col form-group m-form__group">
-                        <input required="true" maxlength="7" type="text" class="form-control m-input" name="apadrinado" id="apadrinado" placeholder="Introduce token de apadrinado">
+                        <input required="true" maxlength="7" type="text" class="form-control m-input" name="apadrinado" id="apadrinado" placeholder="Referred By">
                     </div>
                     <div class="col m--align-left">
-                        <button type="submit" class="btn btn-outline-brand">Enviar</button>
-                        <button type="button" data-toggle="modal" data-target="#m_modal_1_3" class="btn btn-outline-brand">Ver apadrinados</button>
+                        <button type="submit" class="btn btn-outline-brand">Send</button>
+                        <button type="button" data-toggle="modal" data-target="#m_modal_1_3" class="btn btn-outline-brand">Referrered By</button>
                     </div>
                 </div>
                 <input type="hidden" name="padrino" value="{{ $fellow->facesCode }}">
@@ -59,10 +59,10 @@
     <div class="m-widget24">           
         <div class="m-widget24__item">
             <h4 class="m-widget24__title">
-                Fellows activos
+                Active Fellows
             </h4><br>
             <span class="m-widget24__desc">
-                en la comunidad 
+                in Faces Community 
             </span>
             <span class="m-widget24__stats m--font-brand">
                 {{Session::get('fellows')}}
@@ -79,7 +79,7 @@
                 Likes
             </h4><br>
             <span class="m-widget24__desc">
-                totales
+                in Faces Community
             </span>
             <span class="m-widget24__stats m--font-info">
                 {{Session::get('likes')}}
@@ -94,10 +94,10 @@
     <div class="m-widget24">
       <div class="m-widget24__item">
             <h4 class="m-widget24__title">
-                Padrinos
+                Referrer of
             </h4><br>
             <span class="m-widget24__desc">
-                en la comunidad
+                in Faces Community
             </span>
             <span class="m-widget24__stats m--font-danger">
                 {{Session::get('padrinos')}}
@@ -112,10 +112,10 @@
     <div class="m-widget24">
        <div class="m-widget24__item">
             <h4 class="m-widget24__title">
-                Apadrinados
+                Referrered by
             </h4><br>
             <span class="m-widget24__desc">
-                en la comunidad
+                in Faces Community
             </span>
             <span class="m-widget24__stats m--font-success">
                 {{Session::get('apadrinados')}}
@@ -132,20 +132,20 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Abandonar Faces Community</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Are you sure ?</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-       <p>Esta acción es irreversible. Si continúa no podrá volver a acceder a <bold>FACES COMMUNITY</bold>.</p>
+       <p>This action is irreversible. Your profile will be deleted in <bold>FACES COMMUNITY</bold>.</p>
       </div>
       <div class="modal-footer">
         {!! Form::open(['method' => 'post',  'action' => 'FellowsController@leave', 'class' => 'm-form m-form--fit m-form--label-align-right']) !!}
         {{ csrf_field() }}
         <input type="hidden" name="facescode" value="{{ $fellow->facesCode }}">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="submit" class="btn btn-danger">Abandonar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-danger">Leave</button>
         {!! Form::close() !!}
       </div>
     </div>
@@ -157,7 +157,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Padrinos</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Referrer by</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -170,7 +170,7 @@
             </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -181,7 +181,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Apadrinados</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Referrered of</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -194,7 +194,7 @@
             </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
