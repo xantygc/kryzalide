@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Relationships;
 use App\Fellows;
+use App\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -14,6 +15,7 @@ class RelationshipsController extends Controller {
 		$apadrinado = $request->input('apadrinado');
 		$code = $request->input('facescode');
 
+		$news = News::orderBy('created_at','desc')->get();
 
 		/* Add new Relation */ 
 		$relationship = new Relationships;
@@ -42,7 +44,7 @@ class RelationshipsController extends Controller {
 		$request->session()->put('listaPadrinos', $padrinosCodes);
 		
 
-		return view('fellow')->with('fellow', $fellow->first());
+		return view('fellow')->with('fellow', $fellow->first())->('news', $news);
 	}
 
 }
