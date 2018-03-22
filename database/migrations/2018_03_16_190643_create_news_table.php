@@ -17,6 +17,7 @@ class CreateNewsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->longText('article');
+            $table->string('type');
             $table->integer('like')->default(0);
             $table->integer('unlike')->default(0);
             $table->timestamps();
