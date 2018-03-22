@@ -11,6 +11,8 @@ class FellowsController extends Controller {
 
 	public function index(Request $request) {
 
+		$news = News::orderBy('created_at','desc')->get();
+
 		$code = $request->input('facestoken');
 		$fellow = Fellows::where('facescode', $code)->where('disabled', '0')->get();
 
@@ -36,7 +38,7 @@ class FellowsController extends Controller {
 		$request->session()->put('apadrinados', $apadrinados);
 		
 
-		return view('fellow')->with('fellow', $fellow->first());
+		return view('fellow')->with('fellow', $fellow->first())->with('news',$news);
 	}
 
 

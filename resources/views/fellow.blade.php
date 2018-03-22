@@ -1,11 +1,11 @@
 @extends('app')
 @section('content')
 <div class="row">
-  <div class="col-xl-7">
+  <div class="col-xl-4">
     <img class="img-fluid" src="assets/app/media/img/misc/fellowship.jpg">
     <!--end:: Widgets/Blog-->
   </div>
-  <div class="col-xl-5">
+  <div class="col-xl-4">
     <div class="text-center">
       <img style="max-height: 267px" class="img-fluid" src="{{ $fellow->photo }}">
     </div>
@@ -45,6 +45,51 @@
             {!! Form::close() !!}
           </div>
         </div>
+      </div>
+    </div>
+
+    <!--end:: Widgets/Sales States-->
+  </div>  
+  <div class="col-xl-4">
+    <!--begin:: Widgets/Sales States-->
+    <div class="m-portlet">
+      <div class="m-portlet__head">
+        <div class="m-portlet__head-caption">
+          <div class="m-portlet__head-title">
+            <h3 class="m-portlet__head-text">
+              News
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="m-portlet__body" id="inner-right">
+        @foreach($news as $key => $new)
+        <div class="m-widget6">
+          <div class="m-widget6__head">
+            <div class="m-widget6__item">
+              <span class="m-widget6__caption">
+                {{ $new->title }}<br/><span class="text-right" style="font-size: 10px; font-style: italic; color: grey">{{ $new->created_at }}</span>
+              </span>
+              <br/>
+            </div>
+          </div>
+          <div class="m-widget6__body">
+            <div class="m-widget6__text">
+              {{ $new->article }}
+            </div>
+          </div>
+
+          <div class="m-widget6__foot">
+            <div class="m-widget6__action m--align-right">
+
+                <span id="newslike-{{ $new->id }}">{{ $new->like }}</span>
+                <a href="#" onclick="like({{ $new->id }})"><i class="la la-thumbs-o-up"></i></a>
+                <span id="newsunlike-{{ $new->id }}">{{ $new->unlike }}</span>
+                 <a href="#" onclick="unlike({{ $new->id }})"><i class="la la-thumbs-o-down"></i></a>
+            </div>
+          </div>
+        </div>
+        @endforeach
       </div>
     </div>
 

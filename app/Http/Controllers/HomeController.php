@@ -17,7 +17,7 @@ class HomeController extends Controller {
 	*/
 	public function index(Request $request) {
 
-		$news = News::orderBy('created_at','desc')->get();
+		$news = News::where('type','Public')->orderBy('created_at','desc')->get();
 
 		$fellows = DB::table('fellows')->where('disabled',0)->count();
 		$likes = DB::table('news')->sum('like');
