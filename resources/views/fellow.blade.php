@@ -25,7 +25,6 @@
                     </div>
                     <div class="col m--align-left">
                         <button type="submit" class="btn btn-outline-brand">Send</button>
-                        <button type="button" data-toggle="modal" data-target="#m_modal_1_2" class="btn btn-outline-brand">Referrer Of</button>
                     </div>
                 </div>
                 <input type="hidden" name="apadrinado" value="{{ $fellow->facesCode }}">
@@ -39,7 +38,6 @@
                     </div>
                     <div class="col m--align-left">
                         <button type="submit" class="btn btn-outline-brand">Send</button>
-                        <button type="button" data-toggle="modal" data-target="#m_modal_1_3" class="btn btn-outline-brand">Referrered By</button>
                     </div>
                 </div>
                 <input type="hidden" name="padrino" value="{{ $fellow->facesCode }}">
@@ -151,55 +149,6 @@
     </div>
   </div>
 </div>
-<!--end::Modal-->
-<!--begin::Modal-->
-<div class="modal fade" id="m_modal_1_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Referrer by</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-           <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-max-height="200">
-            @foreach(Session::get('listaPadrinos') as $key => $padrino)
-              <p>{{$padrino}}</p>
-            @endforeach
-            </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!--end::Modal-->
-<!--begin::Modal-->+
-<div class="modal fade" id="m_modal_1_3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Referrered of</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-           <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-max-height="200">
-            @foreach(Session::get('listaApadrinados') as $key => $apadrinado)
-              <p>{{$apadrinado}}</p>
-            @endforeach
-            </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!--end::Modal-->
 @stop
 
 
