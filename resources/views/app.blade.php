@@ -43,7 +43,7 @@
               <div class="m-stack__item m-brand">
                 <div class="m-stack m-stack--ver m-stack--general m-stack--inline">
                   <div class="m-stack__item m-stack__item--middle m-brand__logo">
-                    <a href="/" class="m-brand__logo-wrapper">
+                    <a href="#" class="m-brand__logo-wrapper">
                       <img alt="" src="assets/demo/demo2/media/img/logo/krisalyde.png"/>
                     </a>
                   </div>
