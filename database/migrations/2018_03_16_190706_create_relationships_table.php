@@ -15,6 +15,7 @@ class CreateRelationshipsTable extends Migration
     {
         Schema::create('relationships', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('origin');
             $table->integer('referrer');
             $table->integer('referrered');
             $table->timestamps();

@@ -15,6 +15,7 @@ class RelationshipsController extends Controller {
 		$code = $request->input('facescode');
 
 		$relationship = new Relationships;
+		$relationship->origin = $code;
 		$relationship->referrer = $padrino;
 		$relationship->referrered = $apadrinado;
 
