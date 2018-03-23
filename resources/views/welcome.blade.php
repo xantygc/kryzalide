@@ -55,10 +55,10 @@
         <div class="m-widget6">
           <div class="m-widget6__body">
             <div class="m-widget6__text">
-            Lo dejamos claro: esta iniciativa no te llevará a ningún lado sospechoso. Nos comprometemos a que todo lo que se hará cumpla con los textos sobre los Derechos Humanos que reconocen las Naciones Unidas.
+              Let's cut to the chase: there is nothing misleading about this initiative.<br/> We pledge everything around this project will be carried out whilst complying with fundamental texts guaranteeing Human and Environmental rights as recognised by the United Nations.
             </div><br/>
             <div class="m-widget6__body">
-            En esta primera etapa se trata de formar una comunidad, a base de unos encuentros reales. ¿Dónde estamos empezando? Desde Europa, hemos viajado hasta Nueva Zelanda. Hemos empezado un <i>roadtrip</i> de 2 semanas para iniciar la <b>FACES COMMUNITY</b>.
+              The goal of this initial phase will be to build a first fellowship based on real encounters. Where do we start? We've traveled from Europe to New Zealand to start a two-week roadtrip and launch the <b>FACES COMMUNITY</b>.
             </div>
           </div>
         </div>
