@@ -5,7 +5,9 @@ use App\Fellows;
 use App\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use Carbon\Carbon;
+use CB;
 
 class FellowsController extends Controller 
 {
@@ -78,8 +80,17 @@ class FellowsController extends Controller
 		$fellow->disabled = 0;
 
 		$photo = $request->file('photo');
-
-		$fellow->photo = $photo->getPathname();
+		$ext  = $photo->getClientOriginalExtension();
+		$filename = str_slug(pathinfo($photo->getClientOriginalName(), PATHINFO_FILENAME));
+		$filesize = $photo->getClientSize() / 1024;
+		$file_path = 'uploads/'.CB::myId().'/'.date('Y-m');
+		$filename = str_slug($filename,'_').'.'.$ext;
+		//Create Directory Monthly						
+		Storage::makeDirectory($file_path);	
+		Storage::putFileAs($file_path,$photo,$filename);
+		$fellow->photo = $file_path.'/'.$filename;
 		$fellow->save();
+
+		return redirect()->action('HomeController@index')->with('success', 'Your token has been activated !');;
 	}
 }

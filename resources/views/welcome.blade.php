@@ -7,7 +7,12 @@
     <div class="m-portlet">
       <div class="m-portlet__body">
         <div class="m-widget6">
-            
+            @if(session()->has('success'))
+            <div class="alert alert-success alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                <strong>{{ session()->get('success') }}</strong>
+            </div>              
+            @endif
             @if($errors->any())
             <div class="alert alert-warning alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
