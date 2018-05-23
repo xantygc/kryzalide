@@ -13,6 +13,7 @@
 Route::resource('/', 'HomeController');
 Route::get('/leave', 'FellowsController@leave');
 Route::post('/leave', 'FellowsController@leave');
+Route::post('/activate', 'FellowsController@activate');
 Route::get('/fellow', 'FellowsController@index');
 Route::post('/fellow', 'FellowsController@index');
 Route::get('/like/{newsId}', 'HomeController@like');

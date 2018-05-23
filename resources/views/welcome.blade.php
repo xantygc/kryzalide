@@ -22,6 +22,7 @@
                     </div>
                     <div class="col m--align-left">
                         <button type="submit" class="btn btn-outline-brand">Send</button>
+                        <button type="button" data-toggle="modal" data-target="#fellow_activate_modal" class="btn btn-outline-brand">Activate</button>
                     </div>
                 </div>
             {!! Form::close() !!}
@@ -187,4 +188,34 @@
   </div>
 </div>
 
+<div class="modal fade" id="fellow_activate_modal" tabindex="-1" role="dialog" aria-labelledby="fellowAcitvateModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Activate your token</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {!! Form::open(['method' => 'post', 'enctype' => 'multipart/form-data',  'action' => 'FellowsController@activate', 'class' => 'm-form m-form--fit m-form--label-align-right']) !!}
+      {{ csrf_field() }}
+      <div class="modal-body">
+          <div class="col form-group">
+              <label for="token">Token</label>
+              <input required="true" maxlength="7" type="text" class="form-control m-input" name="facestoken" id="facestoken" placeholder="Enter your token">
+          </div>
+          <div class="form-group">
+            <label for="photo">Photo</label>
+            <input required="true" type="file" name="photo" class="form-control-file" id="photo">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <input type="hidden" name="facescode" value="{{ $fellow->facesCode }}">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </div>
+      {!! Form::close() !!}
+    </div>
+  </div>
+</div>
 @stop

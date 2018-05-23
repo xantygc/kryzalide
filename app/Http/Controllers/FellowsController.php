@@ -7,9 +7,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
-class FellowsController extends Controller {
+class FellowsController extends Controller 
+{
 
-	public function index(Request $request) {
+	public function index(Request $request) 
+	{
 
 		$news = News::orderBy('created_at','desc')->get();
 
@@ -66,5 +68,18 @@ class FellowsController extends Controller {
 		);
 
 		return view('welcome')->with('news', $news);
+	}
+
+	public function activate(Request $request)
+	{
+		$this->validate($request, ['photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048']);
+		$fellow = new Fellows;
+		$fellow->facesCode = $request->input('facestoken');
+		$fellow->disabled = 0;
+
+		$photo = $request->file('photo');
+
+		$fellow->photo = $photo->getPathname();
+		$fellow->save();
 	}
 }
