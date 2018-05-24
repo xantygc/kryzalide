@@ -77,10 +77,9 @@ class FellowsController extends Controller
 		try
 		{
 		$this->validate($request, ['photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048']);
-		$fellow = new Fellows;
-		$fellow->facesCode = $request->input('facestoken');
+		$token = $request->input('facestoken');
+		$fellow = Fellows::where('facescode', $token)->where('disabled', '1')->first();
 		$fellow->disabled = 0;
-
 		$photo = $request->file('photo');
 		$ext  = $photo->getClientOriginalExtension();
 		$filename = str_slug(pathinfo($photo->getClientOriginalName(), PATHINFO_FILENAME));
@@ -91,13 +90,14 @@ class FellowsController extends Controller
 		Storage::makeDirectory($file_path);	
 		Storage::putFileAs($file_path,$photo,$filename);
 		$fellow->photo = $file_path.'/'.$filename;
-		$fellow->save();
+		$fellow->update();
 
 		return redirect()->action('HomeController@index')->with('success', 'Your token has been activated !');
 		}
 		catch(\Exception $e)
 		{
-			return redirect()->action('HomeController@index')->withErrors('An error ocurred. Your token has not been activated.');
+			return $e;
+			//return redirect()->action('HomeController@index')->withErrors('An error ocurred. Your token has not been activated.');
 		}
 
 	}
