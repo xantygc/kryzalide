@@ -96,8 +96,7 @@ class FellowsController extends Controller
 		}
 		catch(\Exception $e)
 		{
-			return $e;
-			//return redirect()->action('HomeController@index')->withErrors('An error ocurred. Your token has not been activated.');
+			return redirect()->action('HomeController@index')->withErrors('An error ocurred. Your token has not been activated.');
 		}
 
 	}
