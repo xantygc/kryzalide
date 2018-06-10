@@ -76,7 +76,7 @@ class FellowsController extends Controller
 	{
 		try
 		{
-		$this->validate($request, ['photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048']);
+		$this->validate($request, ['photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240']);
 		$token = $request->input('facestoken');
 		$fellow = Fellows::where('facescode', $token)->where('disabled', '1')->first();
 		$fellow->disabled = 0;
