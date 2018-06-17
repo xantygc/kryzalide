@@ -97,7 +97,7 @@
           </div>
           <div class="m-widget6__body">
             <div class="m-widget6__text">
-              {{ $new->article }}
+              {{html_entity_decode($new->article)}}
             </div>
           </div>
 
