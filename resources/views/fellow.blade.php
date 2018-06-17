@@ -1,11 +1,11 @@
 @extends('app')
 @section('content')
 <div class="row">
-  <div class="col-xl-5">
+  <div class="col-xl-4">
     <img class="img-fluid" src="assets/app/media/img/misc/fellowship.jpg">
     <!--end:: Widgets/Blog-->
   </div>
-  <div class="col-xl-4">
+  <div class="col-xl-3">
     <div class="text-center">
       <img style="max-height: 267px" class="img-fluid" src="{{ $fellow->photo }}">
     </div>
@@ -50,7 +50,7 @@
 
     <!--end:: Widgets/Sales States-->
   </div>  
-  <div class="col-xl-3">
+  <div class="col-xl-5">
     <!--begin:: Widgets/Sales States-->
     <div class="m-portlet">
       <div class="m-portlet__head">
