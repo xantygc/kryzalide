@@ -45,34 +45,7 @@
     </div>
     <!--end:: Widgets/Blog-->
   </div>
-  <div class="col-xl-4">
-    <!--begin:: Widgets/Sales States-->
-    <div class="m-portlet">
-      <div class="m-portlet__head">
-        <div class="m-portlet__head-caption">
-          <div class="m-portlet__head-title">
-            <h3 class="m-portlet__head-text">
-              Faces Community
-            </h3>
-          </div>
-        </div>
-      </div>
-      <div class="m-portlet__body">
-        <div class="m-widget6">
-          <div class="m-widget6__body">
-            <div class="m-widget6__text">
-              Let's cut to the chase: there is nothing misleading about this initiative.<br/> We pledge everything around this project will be carried out whilst complying with fundamental texts guaranteeing Human and Environmental rights as recognised by the United Nations.
-            </div><br/>
-            <div class="m-widget6__body">
-              The goal of this initial phase will be to build a first fellowship based on real encounters. Where do we start? We've traveled from Europe to New Zealand to start a two-week roadtrip and launch the <b>FACES COMMUNITY</b>.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--end:: Widgets/Sales States-->
-  </div>
-  <div class="col-xl-3">
+  <div class="col-xl-7">
     <!--begin:: Widgets/Sales States-->
     <div class="m-portlet">
       <div class="m-portlet__head">

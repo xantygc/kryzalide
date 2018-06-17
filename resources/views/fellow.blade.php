@@ -1,56 +1,11 @@
 @extends('app')
 @section('content')
 <div class="row">
-  <div class="col-xl-4">
+  <div class="col-xl-5">
     <img class="img-fluid" src="assets/app/media/img/misc/fellowship.jpg">
     <!--end:: Widgets/Blog-->
-  </div>
-  <div class="col-xl-3">
-    <div class="text-center">
-      <img style="max-height: 267px" class="img-fluid" src="{{ $fellow->photo }}">
-    </div>
-    <div class="m-portlet">
-      <div class="m-portlet__body">
-        <div class="m-widget6">
-          <div class="m-widget6__body m--align-center">
-            <a class="m-btn m-btn--pill btn btn-outline-danger" data-toggle="modal" data-target="#m_modal_1" href="#" role="button">Leave Faces Community</a>
-          </div>
-          <br/>
-          <div class="m-widget6__body m--align-center">
-            {!! Form::open(['method' => 'post',  'action' => 'RelationshipsController@addRelationship', 'class' => 'm-form m-form--fit m-form--label-align-right']) !!}
-                {{ csrf_field() }}
-                <div class="m-m-form m-form--fit m-form--label-align-rightportlet__body form-row">
-                    <div class="col form-group m-form__group">
-                        <input required="true" maxlength="7" type="text" class="form-control m-input" name="padrino" id="padrino" placeholder="Referr Of">
-                    </div>
-                    <div class="col m--align-left">
-                        <button type="submit" class="btn btn-outline-brand">Send</button>
-                    </div>
-                </div>
-                <input type="hidden" name="apadrinado" value="{{ $fellow->facesCode }}">
-                <input type="hidden" name="facescode" value="{{ $fellow->facesCode }}">
-            {!! Form::close() !!}
-            {!! Form::open(['method' => 'post',  'action' => 'RelationshipsController@addRelationship', 'class' => 'm-form m-form--fit m-form--label-align-right']) !!}
-                {{ csrf_field() }}
-                <div class="m-m-form m-form--fit m-form--label-align-rightportlet__body form-row">
-                    <div class="col form-group m-form__group">
-                        <input required="true" maxlength="7" type="text" class="form-control m-input" name="apadrinado" id="apadrinado" placeholder="Referred By">
-                    </div>
-                    <div class="col m--align-left">
-                        <button type="submit" class="btn btn-outline-brand">Send</button>
-                    </div>
-                </div>
-                <input type="hidden" name="padrino" value="{{ $fellow->facesCode }}">
-                <input type="hidden" name="facescode" value="{{ $fellow->facesCode }}">
-            {!! Form::close() !!}
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--end:: Widgets/Sales States-->
-  </div>  
-  <div class="col-xl-5">
+  </div> 
+  <div class="col-xl-7">
     <!--begin:: Widgets/Sales States-->
     <div class="m-portlet">
       <div class="m-portlet__head">
@@ -75,7 +30,7 @@
           </div>
           <div class="m-widget6__body">
             <div class="m-widget6__text">
-              {!! $new->article !!}
+              {!! $new->article }}
             </div>
           </div>
 
