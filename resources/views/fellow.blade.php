@@ -30,7 +30,7 @@
           </div>
           <div class="m-widget6__body">
             <div class="m-widget6__text">
-              {!! $new->article }}
+              {!! $new->article !!}
             </div>
           </div>
 
